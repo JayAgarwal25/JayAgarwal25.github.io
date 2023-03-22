@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.scss">
+    <style>
+        @font-face {
+font-family: "UberMove";
+font-display: fallback;
+src: url("https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/db048373411f6612.woff2") format("woff2"),
+url("https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/2f5c8af9a7912adf.woff") format("woff");
+font-weight: 400;
+}
+@font-face {
+font-family: "UberMove";
+font-display: fallback;
+src: url("https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/83a314e1b88d789f.woff2") format("woff2"),
+url("https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/9173a3c32322b79f.woff") format("woff");
+font-weight: 700;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="top-h-menu">
+                <div class="h-menu-top-btn">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <button class="signup"> Sign Up</button>
+                    <button class="login"> Log in </button>
+                </div>
+                <div class="h-menu-top-links">
+                    <ul>
+                        <li>Create a business account</li>
+                        <li>Add your restaurant</li>
+                        <li>Sign up to deliver</li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="bottom-h-menu">
+                <div class="image-container"><img class="uber-logo" src="assets\31ee382bd0e6ed84.svg" alt="logo">
+                    <span> There's more to love in the app</span>
+                </div>
+                <div class="bottom-buttons">
+                    <button><span><i class="fa-brands fa-apple"></i></span> iPhone</button>
+                    <button><span><i class="fa-brands fa-android"></i></span> Android</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container" id="navbar">
+            <button class="openbtn" onclick="openNav()">☰</button>
+            <h1 class="logo">BITS<span> Eats </span></h1>
+            <div class="headerbuttons">
+                <button class="signbtn-1">
+                    <svg 
+                        class="svg-icon" 
+                        style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" 
+                        viewBox="0 100 800 900" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M512 597.994667q108.010667 0 225.002667 46.997333t116.992 123.008l0 85.994667-684.010667 0 0-85.994667q0-76.010667 116.992-123.008t225.002667-46.997333zM512 512q-69.994667 0-120-50.005333t-50.005333-120 50.005333-121.002667 120-51.008 120 51.008 50.005333 121.002667-50.005333 120-120 50.005333z"  />
+                    </svg>
+                    Log in
+                </button>    
+                <button class="signbtn-2">
+                    Sign up
+                </button> 
+            </div>
+            
+        </div>    
+    </header>
+            
+    <div class="delivery-bar">
+        <h1>
+            Order food to your door
+        </h1>
+        <div class="delivery-bar-input">
+            <form>
+                <input id="delivery-address" type="text" name="address" placeholder="Enter delivery address">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="myFunction()"> <i class="fa-solid fa-clock"></i> Deliver now <i class="fa">&#xf078;</i></button>  
+                <div id="Dropdown-list" class="dropdown-content">
+                    <a href="#"><i class="fa-solid fa-clock"></i> Deliver now</a>
+                    <a href="#"><i class="fa-sharp fa-solid fa-calendar"></i> Schedule for later</a>
+                </div>
+            </div>  
+                <button id="find-food">Find Food</button>
+            </form>
+            <p><a href="#">Sign In</a> for your recent addresses</p>
+
+        </div>
+    </div>
+
+    <div class="things">
+        <div class="container">
+            <div class="grid">
+                <div class="grid-element">
+                   <div class="image">
+                    <img src="/assets/photo-1.png" alt="Create a business account">
+                
+                   </div>
+                   <div class="link-heading">
+                    <h3>Feed your employees</h3>
+
+                   </div> 
+                   <div class="element-link">
+                    <a href="#">Create a business account</a>
+
+                   </div>
+                </div>
+                <div class="grid-element">
+                    <div class="image">
+                     <img src="/assets/photo-2.png" alt="Create a business account">
+                 
+                    </div>
+                    <div class="link-heading">
+                     <h3>Your restaurant,
+                        delivered</h3>
+ 
+                    </div> 
+                    <div class="element-link">
+                     <a href="#">Add your restaurant</a>
+ 
+                    </div>
+                 </div>
+                 <div class="grid-element">
+                    <div class="image">
+                     <img src="/assets/photo-3.png" alt="Create a business account">
+                 
+                    </div>
+                    <div class="link-heading">
+                     <h3>Deliver with Uber Eats</h3>
+ 
+                    </div> 
+                    <div class="element-link">
+                     <a href="#">Sign up to deliver</a>
+ 
+                    </div>
+                 </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="cities">
+        <div class="heading"><h1>Cities near me</h1><a href="#">View all 500+ cities</a>
+        </div>
+        <div class="map">
+            <img src="assets\map.png" alt="map">
+        </div>
+        <div class="cities-list">
+
+            <div class="row">
+                <div class="column">
+                  <ul>
+                    <li> Akron</li>
+                    <li> Albuquerque</li>
+                    <li> Bridgeport</li>
+                    <li> Concord</li>
+                    <li> Dayton</li>
+                    <li> El Pasov</li>
+                  </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li> Hartford</li>
+                        <li> Houston</li>
+                        <li> Indianapolis</li>
+                        <li> McAllen</li>
+                        <li> Mesa</li>
+                        <li> Milwaukee</li>
+                    
+                    </ul>    
+                </div>
+                <div class="column">
+                    <ul>
+                        <li> Nashville</li>
+                        <li> New Orleans</li>
+                        <li> Oklahoma City</li>
+                        <li> Omaha</li>
+                        <li> Orlando</li>
+                        <li> Palm Bay</li>
+                    </ul>    
+                </div>
+                <div class="column">
+                    <ul>
+                        <li> Providence</li>
+                        <li> Queens</li>
+                        <li> San Antonio</li>
+                     <li> Stony Brook</li>
+                     <li> Tucson</li>
+                     <li> West Hollywood</li>
+
+                    </ul>    
+                </div>
+              </div>
+
+        </div>
+    </div>
+
+    <div class="cities">
+        <div class="heading"><h1>Countries with Uber Eats</h1><a href="#">View all countries</a>
+        </div>
+        <div class="cities-list">
+
+            <div class="row">
+                <div class="column">
+                  <ul>
+                   <li>Australia</li>
+                   <li>Belgium</li>
+                   <li>Canada</li>
+                   <li>Chile</li>
+                   <li>Costa Rica</li>
+                   <li>Dominican Republic</li>
+                   <li>Ecuador</li>
+                   <li>El Salvador</li>
+                  </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li> France</li>
+                        <li> Germany</li>
+                        <li> Guatemala</li>
+                        <li> Ireland</li>
+                        <li> Italy</li>
+                        <li> Japan</li>
+                        <li> Kenya</li>
+                        <li> Mexico</li>
+                    
+                    </ul>    
+                </div>
+                <div class="column">
+                    <ul>
+                        <li> Netherlands</li>
+                        <li> New Zealand</li>
+                        <li> Panama</li>
+                        <li> Poland</li>
+                        <li> Portugal</li>
+                        <li> South Africa</li>
+                        <li> Spain</li>
+                        <li> Sri Lanka</li>
+                    </ul>    
+                </div>
+                <div class="column">
+                    <ul>
+                        <li> Sweden</li>
+                        <li> Switzerland</li>
+                        <li> Taiwan (ROC)</li>
+                        <li> United Kingdom</li>
+                        <li> United States</li>
+
+                    </ul>    
+                </div>
+              </div>
+
+        </div>
+    </div>
+    
+    
+    <hr class="divider">
+
+    <footer>
+        <div class="footer-upper">
+            <div class="downloads">
+                <h1 class="logo">BITS<span> Eats </span></h1>
+                <div class="download-btn">
+                    <img src="assets\app-store.svg" alt="apple store">
+                    <img src="assets\google-play.png" alt="google play">
+                </div>
+
+
+            </div>
+            <div class="column-two">
+                <ul>
+                    <li> Get it on Google Play</li>
+                    <li> Get Help</li>
+                    <li> Buy gift cards</li>
+                    <li> Add your restaurant</li>
+                    <li> Sign up to deliver</li>
+                    <li> Create a business account</li>
+                    <li> Promotions</li>
+                </ul>
+
+            </div>
+            <div class="column-three">
+                <ul>
+                    <li> Restaurants near me</li>
+                    <li> View all cities</li>
+                    <li> View all countries</li>
+                    <li> Pickup near me</li>
+                    <li> About Uber Eats</li>
+                    <li> English</li>
+
+                </ul>
+
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="copy-right">
+            <span> © Jay Agarwal</span>
+        </div>
+
+
+    </footer>
+    
+        
+            
+            
+            
+<script>
+        function myFunction() {
+          document.getElementById("Dropdown-list").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+         if (openDropdown.classList.contains('show')) {
+             openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+
+function openNav() {
+  document.getElementById("hamburger-menu").style.width = "300px"; 
+}
+
+function closeNav() {
+  document.getElementById("hamburger-menu").style.width = "0";
+}
+
+window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+})
+        
+</script>
+           
+
+        
+    
+    
+</body>
+</html>
