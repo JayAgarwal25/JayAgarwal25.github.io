@@ -1,0 +1,410 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-image: url("assets/website-bg.png");
+  background-size: 1500px;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  transition: margin-left 0.5s;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  padding-left: 30px;
+  background-color: #ffffff;
+}
+
+header {
+  margin-left: 30px;
+}
+header .logo {
+  font-weight: 300;
+}
+header .logo span {
+  font-weight: 600;
+}
+header .container {
+  display: flex;
+  align-items: center;
+}
+header .headerbuttons {
+  margin-left: auto;
+  display: flex;
+}
+header .signbtn-1 {
+  font-size: 16px;
+}
+header .signbtn-1 .svg-icon {
+  font-size: 26px;
+}
+header .signbtn-2 {
+  font-size: 16px;
+}
+header .signbtn-1 {
+  padding: 12px;
+  margin-left: 14px;
+  border-radius: 30px;
+  border: none;
+  background-color: white;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+header .signbtn-2 {
+  padding: 16px;
+  margin-left: 14px;
+  margin-right: 24px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  background-color: black;
+}
+header .top-h-menu .h-menu-top-btn .signup {
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: black;
+  width: 80%;
+  margin: 6px 24px;
+  font-size: 20px;
+}
+header .top-h-menu .h-menu-top-btn .login {
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  color: black;
+  background-color: #EEEEEE;
+  width: 80%;
+  margin: 6px 24px;
+  font-size: 20px;
+}
+header .top-h-menu .h-menu-top-links {
+  color: black;
+}
+header .top-h-menu .h-menu-top-links ul {
+  list-style-type: none;
+  padding: 6px 20px;
+}
+header .top-h-menu .h-menu-top-links ul li {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-left: 2px;
+}
+header .bottom-h-menu {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
+}
+header .bottom-h-menu .image-container {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+header .bottom-h-menu .image-container img {
+  height: 60px;
+  width: 30%;
+  padding-right: 12px;
+}
+header .bottom-h-menu .bottom-buttons {
+  margin: 10px 10px 0px 10px;
+}
+header .bottom-h-menu .bottom-buttons button {
+  padding: 10px 0px 10px 0px;
+  border-radius: 16px;
+  border: none;
+  color: black;
+  background-color: #EEEEEE;
+  width: 40%;
+}
+header .bottom-h-menu .bottom-buttons i {
+  font-size: 16px;
+  color: black;
+}
+
+.openbtn {
+  margin-right: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.delivery-bar {
+  margin-left: 30px;
+  margin-top: 280px;
+}
+.delivery-bar h1 {
+  font-size: 48px;
+  font-family: UberMove, sans-serif;
+  font-weight: 700;
+}
+.delivery-bar #delivery-address {
+  width: 40%;
+  box-sizing: border-box;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("assets/placeholder.png");
+  background-position: 12px 16px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding: 18px 20px 18px 48px;
+  margin-bottom: 10px;
+}
+.delivery-bar #find-food {
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 18px;
+  border: none;
+  color: white;
+  background-color: black;
+  margin-left: 6px;
+}
+.delivery-bar a {
+  color: black;
+}
+
+.dropbtn {
+  background-color: white;
+  color: black;
+  margin-left: 6px;
+  padding: 18px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.dropbtn i {
+  font-size: 16px;
+  padding-left: 6px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content i {
+  color: black;
+  font-size: 14px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.hamburger-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.hamburger-menu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.hamburger-menu a:hover {
+  color: #f1f1f1;
+}
+
+.hamburger-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .hamburger-menu {
+    padding-top: 15px;
+  }
+  .hamburger-menu a {
+    font-size: 18px;
+  }
+}
+.things {
+  margin-top: 400px;
+  margin-bottom: 40px;
+}
+.things .grid {
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.things .grid .grid-element {
+  width: calc(33.3333333333% - 8px);
+  margin-top: 2rem;
+  padding-right: 16px;
+}
+.things .grid .grid-element .image {
+  height: 240px;
+  overflow: hidden;
+}
+.things .grid .grid-element .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.things .grid .grid-element .element-link a {
+  color: black;
+  text-align: left;
+}
+.things .grid .grid-element .link-heading h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-family: UberMove, sans-serif;
+  font-weight: 700;
+}
+
+.cities {
+  margin: 40px;
+}
+.cities .heading {
+  display: flex;
+}
+.cities .heading h1 {
+  font-family: UberMove, sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+.cities .heading a {
+  color: black;
+  position: absolute;
+  right: 0;
+  margin-right: 40px;
+  padding-top: 40px;
+}
+.cities .map {
+  height: 340px;
+}
+.cities .map img {
+  height: 100%;
+  width: 100%;
+}
+.cities .cities-list .column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+.cities .cities-list .column ul {
+  padding: 10px 2px;
+}
+.cities .cities-list .column ul li {
+  list-style-type: none;
+  font-size: 14px;
+  padding: 14px 2px;
+}
+.cities .cities-list .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .cities .cities-list .column {
+    width: 100%;
+  }
+}
+
+.divider {
+  border-top: 1px solid #F6F6F6;
+}
+
+footer {
+  margin-left: 30px;
+}
+footer .footer-upper {
+  float: left;
+  display: flex;
+  width: 100%;
+}
+footer .footer-upper .downloads {
+  width: 48%;
+}
+footer .footer-upper .downloads .download-btn {
+  position: relative;
+  bottom: 0;
+  margin-top: 150px;
+}
+footer .footer-upper .downloads .download-btn img {
+  height: 40px;
+}
+footer .footer-upper .downloads .logo {
+  margin-top: 50px;
+  font-weight: 300;
+}
+footer .footer-upper .downloads .logo span {
+  font-weight: 600;
+}
+footer .footer-upper .column-two {
+  width: 26%;
+}
+footer .footer-upper .column-two ul li {
+  list-style-type: none;
+  padding: 10px 4px;
+}
+footer .footer-upper .column-three {
+  width: 26%;
+}
+footer .footer-upper .column-three ul li {
+  list-style-type: none;
+  padding: 10px 4px;
+}
+@media screen and (max-width: 600px) {
+  footer .footer-upper .column-two .column-three {
+    width: 100%;
+  }
+}
+footer .copy-right span {
+  position: absolute;
+  right: 0;
+  margin: 5px 30px;
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
