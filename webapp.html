@@ -5,18 +5,20 @@
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-        
-        <a-assets>
-            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
-        </a-assets>
-
-        <a-marker type="pattern" preset="custom" url="https://raw.githack.com/JayAgarwal25/JayAgarwal25.github.io/master/pattern-Question-Mark.patt">
-            <a-entity
-                gltf-model="#animated-asset"
-                scale="2">
-            </a-entity>
-        </a-marker>
-
+      <a-marker preset="hiro">
+        <!-- we use cors proxy to avoid cross-origin problems -->
+        <!--
+          ⚠️⚠️⚠️
+          https://arjs-cors-proxy.herokuapp.com/ is now offline, Heroku has dismissed all his free plans from November 2022.
+          You need to host your own proxy and use it instead. The proxy is based on CORS Anywhere (see https://github.com/Rob--W/cors-anywhere).
+          ⚠️⚠️⚠️
+        -->
+        <a-entity
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/JayAgarwal25/JayAgarwal25.github.io/4d3ce076c748629b8d5739314eeac6be2cb5369a/test1.glb"
+        ></a-entity>
+      </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
