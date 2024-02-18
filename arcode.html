@@ -5,9 +5,16 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
     <script>
 
+        var showPanel = false;
+        const panel1 = document.getElementById("panel1");
+        const panel2 = document.getElementById("panel2");
+        panel2.setAttribute("visible", showPanel);
         const button = document.querySelector('#button');
         button.addEventListener("click", event => {
           console.log("button click");
+          showPanel = !showPanel;
+          panel2.setAttribute("visible", showPanel);
+          panel1.setAttribute("visible", !showPanel);
         });
 
     </script>
@@ -17,15 +24,19 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <a-asset-item id="panel1" src="test1.glb"></a-asset-item>
-        <a-asset-item id="panel2" src="tttttt.glb"></a-asset-item>
+        <a-asset-item id="welc" src="test1.glb"></a-asset-item>
+        <a-asset-item id="ins1" src="tttttt.glb"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1.5 1.5 1.5" src="#panel1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
-        <!-- <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1.5 1.5 1.5" src="#panel2" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> !-->
-        <a-triangle id="button" rotation="0 0 0" class="clickable" color="blue" position="0 0 1" scale="0.2 0.2 0.2" vertex-a="0 1 0" ></a-triangle>
+        <a-entity id="panel1">
+        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1.5 1.5 1.5" src="#welc" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+        </a-entity>
+        <a-entity id="panel2">
+          <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1.5 1.5 1.5" src="#ins1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+        </a-entity>   
+        <a-triangle id="button" rotation="0 0 -90" class="clickable" color="blue" position="0 -0.7 0" scale="0.15 0.15 0.15" vertex-a="0 1 0"></a-triangle>
       </a-entity>
       <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
 
