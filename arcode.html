@@ -38,11 +38,19 @@
           panel.setAttribute("position", "0 " + y + " -0.01");
         }, 10);
       }
+      
       AFRAME.registerComponent('mytarget', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
-            showpanel(() => {
+            showAvatar(() => {
+              setTimeout(() => {
+                showpanel(() => {
+                  setTimeout(() => {
+                    showInfo();
+                  }, 300);
+                });
+              }, 300);
             });
           });
           this.el.addEventListener('targetLost', event => {
