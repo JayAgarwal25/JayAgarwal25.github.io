@@ -5,7 +5,9 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
     <script>
-      window.addEventListener("DOMContentLoaded", (event) => {
+      
+       
+      document.addEventListener("DOMContentLoaded", (event) => {
         const sceneEl = document.querySelector("#scene");
 
         sceneEl.addEventListener("arReady", (event) => {
@@ -14,16 +16,13 @@
               const panel2 = document.getElementById("panel2");
               panel2.setAttribute("visible", showPanel);
 
-              const studioMarker = document.getElementById("studio-marker");
               const rightButton = document.getElementById("rightButton");
-              studioMarker.addEventListener("targetFound", (event) => {
                 rightButton.addEventListener("click", event => {
-                  console.log("button click");
+                  //console.log("button click");
                   showPanel = !showPanel;
                   panel2.setAttribute("visible", showPanel);
                   panel1.setAttribute("visible", !showPanel);
                 });
-              });
             });
           });
     </script>
