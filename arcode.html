@@ -61,8 +61,8 @@
     <a-scene id="scene" mindar-image="imageTargetSrc: targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <a-asset-item id="welc" src="test1.glb"></a-asset-item>
-        <img id="zoomIn-icon" src="zoom-in-icon.png" />
-        <img id="zoomOut-icon" src="zoom-out-icon.png" />
+        <img id="zoomIn-icon" src="zoom-in-icon-blue.png" />
+        <img id="zoomOut-icon" src="zoom-out-icon-blue.png" />
         <img id="ins1" src="Slide_1.jpg" />
         <img id="ins2" src="Slide_2.jpg" />
         <img id="ins3" src="Slide_3.jpg" />
@@ -78,22 +78,22 @@
         <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1.5 1.5 1.5" src="#welc" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-entity>
         <a-entity class="panel" id="panel1" visible="false">
-          <a-image rotation="0 0 0" position="0 0 0.1" scale="1.5 1.5 1.5" src="#ins1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="2 1.5 1.5" src="#ins1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-entity>  
         <a-entity class="panel" id="panel2" visible="false">
-          <a-image rotation="0 0 0" position="0 0 0.1" scale="1.5 1.5 1.5" src="#ins2" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="2 1.5 1.5" src="#ins2" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-entity>   
         <a-entity class="panel" id="panel3" visible="false">
-          <a-image rotation="0 0 0" position="0 0 0.1" scale="1.5 1.5 1.5" src="#ins3" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="2 1.5 1.5" src="#ins3" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-entity>  
         <a-entity class="panel" id="panel4" visible="false">
-          <a-image rotation="0 0 0" position="0 0 0.1" scale="1.5 1.5 1.5" src="#ins4" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="2 1.5 1.5" src="#ins4" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-entity>  
 
-        <a-image id="zoomIn" class="clickable" src="#zoomIn-icon" position="0.9 1 0" height="0.15" width="0.15"></a-image>
-        <a-image id="zoomOut" class="clickable" src="#zoomOut-icon" position="0.7 1 0" height="0.15" width="0.15"></a-image>
-        <a-triangle id="rightButton" rotation="0 0 -90" class="clickable" color="blue" position="0.5 -1 0" scale="0.15 0.15 0.15" vertex-a="0 1 0"></a-triangle>
-        <a-triangle id="leftButton" rotation="0 0 90" class="clickable" color="blue" position="-0.5 -1 0" scale="0.15 0.15 0.15" vertex-a="0 1 0"></a-triangle>
+        <a-image id="zoomIn" class="clickable" src="#zoomIn-icon" position="0.7 1 0" height="0.15" width="0.15"></a-image>
+        <a-image id="zoomOut" class="clickable" src="#zoomOut-icon" position="0.9 1 0" height="0.15" width="0.15"></a-image>
+        <a-triangle id="rightButton" rotation="0 0 -90" class="clickable" color="#027f8c" position="0.5 -1 0" scale="0.15 0.15 0.15" vertex-a="0 1 0"></a-triangle>
+        <a-triangle id="leftButton" rotation="0 0 90" class="clickable" color="#027f8c" position="-0.5 -1 0" scale="0.15 0.15 0.15" vertex-a="0 1 0"></a-triangle>
       </a-entity>
     </a-scene>
   </body>
