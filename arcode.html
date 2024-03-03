@@ -14,8 +14,6 @@
               
               const panels = document.getElementsByClassName("panel");
               let currentIndex = 0;
-             
-              panels.setAttribute("visible", true);
 
               const showPanel = (item) => {
                 for (let i = 0; i <= 4; i++) {
@@ -75,16 +73,16 @@
         <a-entity class="panel" id="panel0">
         <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1.5 1.5 1.5" src="#welc" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-entity>
-        <a-entity class="panel" id="panel1">
+        <a-entity class="panel" id="panel1" visible="false">
           <a-image rotation="0 0 0" position="0 0 0.1" scale="1.5 1.5 1.5" src="#ins1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-entity>  
-        <a-entity class="panel" id="panel2">
+        <a-entity class="panel" id="panel2" visible="false">
           <a-image rotation="0 0 0" position="0 0 0.1" scale="1.5 1.5 1.5" src="#ins2" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-entity>   
-        <a-entity class="panel" id="panel3">
+        <a-entity class="panel" id="panel3" visible="false">
           <a-image rotation="0 0 0" position="0 0 0.1" scale="1.5 1.5 1.5" src="#ins3" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-entity>  
-        <a-entity class="panel" id="panel4">
+        <a-entity class="panel" id="panel4" visible="false">
           <a-image rotation="0 0 0" position="0 0 0.1" scale="1.5 1.5 1.5" src="#ins4" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-entity>  
 
