@@ -24,6 +24,7 @@
               function nextPanel() {
                 currentIndex = (currentIndex + 1) % panels.length;
                 showPanel(currentIndex);
+                document.querySelector("exploreButton").setAttribute("visible", false);
               }
 
               function prevPanel() {
@@ -83,9 +84,10 @@
         <a-entity class="welcomePanel" id="panel0">
             <a-image rotation="0 0 0" position="0 0 0.1" scale="2.0 1.2 1.2" src="#welcKXR" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-entity>
+        
         <a-entity class="infoPanel" id="panel1" visible="false">
-          <a-image rotation="0 0 0" position="0 0 0.1" scale="1 1 1" src="#desc1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
-          <a-image rotation="0 0 0" position="0.2 -0.4 0.1" scale="1 1 1" src="#title1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="1 1 1" src="#desc1" > 
+          <a-image rotation="0 0 0" position="0.2 -0.4 0.1" scale="1 1 1" src="#title1"> 
 
         </a-entity>  
            
