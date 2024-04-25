@@ -1,1 +1,130 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <script>
+      
+       
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const sceneEl = document.querySelector("#scene");
+
+        sceneEl.addEventListener("arReady", (event) => {
+              
+              const panels = document.getElementsByClassName("panel");
+              let currentIndex = 0;
+
+
+              const showPanel = (item) => {
+                for (let i = 0; i <= 4; i++) {
+                  document.querySelector("#panel" + i).setAttribute("visible", i === item);
+                }
+              }
+              function nextPanel() {
+                currentIndex = (currentIndex + 1) % panels.length;
+                showPanel(currentIndex);
+              }
+
+              function prevPanel() {
+                currentIndex = (currentIndex - 1 + panels.length) % panels.length;
+                showPanel(currentIndex);
+              }
+
+              showPanel(currentIndex);
+
+              const rightButton = document.getElementById("rightButton");
+                rightButton.addEventListener("click", nextPanel);
+              const leftButton = document.getElementById("leftButton");
+                leftButton.addEventListener("click", prevPanel);
+                
+  
+              const zoomOut = document.getElementById("zoomOut");
+                zoomOut.addEventListener("click", event => {
+                  for (let i = 0; i <= 4; i++) {
+                    document.querySelector("#panel" + i).object3D.scale.x -= 0.5;
+                    document.querySelector("#panel" + i).object3D.scale.y -= 0.5;
+                  }
+  
+                });
+
+              const zoomIn = document.getElementById("zoomIn");
+              zoomIn.addEventListener("click", event => {
+                  for (let i = 0; i <= 4; i++) {
+                    document.querySelector("#panel" + i).object3D.scale.x += 0.5;
+                    document.querySelector("#panel" + i).object3D.scale.y += 0.5;
+                  }
+
+                });
+
+            });
+          });
+    </script>
+
+
+</head>
+  <body>
+    <a-scene id="scene" mindar-image="imageTargetSrc: artPieces.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <a-asset-item id="welc" src="test1.glb"></a-asset-item>
+        <img id="zoomIn-icon" src="zoom-in-icon-blue.png" />
+        <img id="zoomOut-icon" src="zoom-out-icon-blue.png" />
+        <img id="ins1" src="Slide_1.jpg" />
+        <img id="ins2" src="Slide_2.jpg" />
+        <img id="ins3" src="Slide_3.jpg" />
+        <img id="ins4" src="Slide_4.jpg" />
+       
+
+        
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0" id="studio-marker">
+       
+        <a-entity class="welcomePanel" id="panel0">
+        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1.5 1.5 1.5" src="#welc" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+        </a-entity>
+        <a-entity class="infoPanel" id="panel1" visible="false">
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="2.4 1.5 1.5" src="#ins1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+        </a-entity>  
+        <a-entity class="historyPanel" id="panel2" visible="false">
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="2.4 1.5 1.5" src="#ins2" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+        </a-entity>   
+       
+        <a-image id="zoomIn" class="clickable" src="#zoomIn-icon" position="0.6 1 0.2" height="0.15" width="0.15"></a-image>
+        <a-image id="zoomOut" class="clickable" src="#zoomOut-icon" position="0.9 1 0.2" height="0.15" width="0.15"></a-image>
+       
+        <a-image id="infoButton" rotation="0 0 -90" class="clickable"  position="0.5 -1 0" scale="0.15 0.15 0.15" > </a-image>
+        <a-image id="historyButton" rotation="0 0 90" class="clickable"  position="-0.5 -1 0" scale="0.15 0.15 0.15" ></a-image>
+
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 1" id="studio-marker2">
+       
+        <a-entity class="panel" id="panel0">
+        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1.5 1.5 1.5" src="#welc" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+        </a-entity>
+        <a-entity class="panel" id="panel1" visible="false">
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="2.4 1.5 1.5" src="#ins1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+        </a-entity>  
+        <a-entity class="panel" id="panel2" visible="false">
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="2.4 1.5 1.5" src="#ins2" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+        </a-entity>   
+        <a-entity class="panel" id="panel3" visible="false">
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="2.4 1.5 1.5" src="#ins3" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+        </a-entity>  
+        <a-entity class="panel" id="panel4" visible="false">
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="2.4 1.5 1.5" src="#ins4" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+        </a-entity>  
+        <a-image id="zoomIn" class="clickable" src="#zoomIn-icon" position="0.6 1 0.2" height="0.15" width="0.15"></a-image>
+        <a-image id="zoomOut" class="clickable" src="#zoomOut-icon" position="0.9 1 0.2" height="0.15" width="0.15"></a-image>
+       
+        <a-triangle id="rightButton" rotation="0 0 -90" class="clickable" color="#027f8c" position="0.5 -1 0" scale="0.15 0.15 0.15" vertex-a="0 1 0"></a-triangle>
+        <a-triangle id="leftButton" rotation="0 0 90" class="clickable" color="#027f8c" position="-0.5 -1 0" scale="0.15 0.15 0.15" vertex-a="0 1 0"></a-triangle>
+      </a-entity>
+
+
+    </a-scene>
+  </body>
+</html>
 
