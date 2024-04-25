@@ -17,7 +17,7 @@
 
 
               const showPanel = (item) => {
-                for (let i = 0; i <= 1; i++) {
+                for (let i = 0; i <= 2; i++) {
                   document.querySelector("#panel" + i).setAttribute("visible", i === item);
                 }
               }
@@ -84,8 +84,8 @@
             <a-image rotation="0 0 0" position="0 0 0.1" scale="2.0 1.2 1.2" src="#welcKXR" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-entity>
         <a-entity class="infoPanel" id="panel1" visible="false">
-          <a-image rotation="0 0 0" position="0.8 0.8 0.1" scale="1 1 1" src="#desc1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
-          <a-image rotation="0 0 0" position="0.2 -0.8 0.1" scale="1 1 1" src="#title1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="1 1 1" src="#desc1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+          <a-image rotation="0 0 0" position="0.2 -0.4 0.1" scale="1 1 1" src="#title1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
 
         </a-entity>  
            
@@ -93,7 +93,7 @@
         <a-image id="zoomIn" class="clickable" src="#zoomIn-icon" position="0.6 1 0.2" height="0.15" width="0.15"></a-image>
         <a-image id="zoomOut" class="clickable" src="#zoomOut-icon" position="0.9 1 0.2" height="0.15" width="0.15"></a-image>
        
-        <a-image id="exploreButton" rotation="0 0 0" class="clickable" src="#explr-btn" position="0 -1 0" scale="0.25 0.5 0.25" > </a-image>
+        <a-image id="exploreButton" rotation="0 0 0" class="clickable" src="#explr-btn" position="0 -1 0" scale="0.5 0.25 0.25" > </a-image>
 
       </a-entity>
 
