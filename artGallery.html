@@ -33,7 +33,7 @@
 
               showPanel(currentIndex);
 
-              const rightButton = document.getElementById("rightButton");
+              const rightButton = document.getElementById("exploreButton");
                 rightButton.addEventListener("click", nextPanel);
               const leftButton = document.getElementById("leftButton");
                 leftButton.addEventListener("click", prevPanel);
@@ -69,11 +69,12 @@
         <a-asset-item id="welc" src="test1.glb"></a-asset-item>
         <img id="zoomIn-icon" src="zoom-in-icon-blue.png" />
         <img id="zoomOut-icon" src="zoom-out-icon-blue.png" />
+        <img id="explr-btn" src="Explore_Button.png" />
         <img id="welcKXR" src="KXR_Welcome.png" />
-        <img id="ins1" src="Slide_1.jpg" />
-        <img id="ins2" src="Slide_2.jpg" />
-        <img id="ins3" src="Slide_3.jpg" />
-        <img id="ins4" src="Slide_4.jpg" />
+        <img id="desc1" src="Mona_Lisa_Desc.png" />
+        <img id="title1" src="Mona_Lisa_Title.png" />
+        <img id="desc2" src="Starry_Night_Desc.png" />
+        <img id="title2" src="Starry_Night_Title.png" />
        
 
         
@@ -86,37 +87,37 @@
             <a-image rotation="0 0 0" position="0 0 0.1" scale="2.0 1.2 1.2" src="#welcKXR" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-entity>
         <a-entity class="infoPanel" id="panel1" visible="false">
-          <a-image rotation="0 0 0" position="0 0 0.1" scale="2.4 1.5 1.5" src="#ins1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+          <a-image rotation="0 0 0" position="0.8 0.8 0.1" scale="1 1 1" src="#desc1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+          <a-image rotation="0 0 0" position="0.2 -0.8 0.1" scale="1 1 1" src="#title1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+
         </a-entity>  
-        <a-entity class="historyPanel" id="panel2" visible="false">
-          <a-image rotation="0 0 0" position="0 0 0.1" scale="2.4 1.5 1.5" src="#ins2" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
-        </a-entity>   
+           
        
         <a-image id="zoomIn" class="clickable" src="#zoomIn-icon" position="0.6 1 0.2" height="0.15" width="0.15"></a-image>
         <a-image id="zoomOut" class="clickable" src="#zoomOut-icon" position="0.9 1 0.2" height="0.15" width="0.15"></a-image>
        
-        <a-image id="infoButton" rotation="0 0 -90" class="clickable"  position="0.5 -1 0" scale="0.15 0.15 0.15" > </a-image>
-        <a-image id="historyButton" rotation="0 0 90" class="clickable"  position="-0.5 -1 0" scale="0.15 0.15 0.15" ></a-image>
+        <a-image id="exploreButton" rotation="0 0 -90" class="clickable" src="#explr-btn" position="0 -1 0" scale="0.5 0.5 0.5" > </a-image>
 
       </a-entity>
 
       <a-entity mindar-image-target="targetIndex: 1" id="studio-marker2">
        
-        <a-entity class="welcomePanel" id="panel0">
-            <a-image rotation="0 0 0" position="0 0 0.1" scale="2.0 1.2 1.2" src="#welcKXR" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
-        </a-entity>
-        <a-entity class="infoPanel" id="panel1" visible="false">
-          <a-image rotation="0 0 0" position="0 0 0.1" scale="2.4 1.5 1.5" src="#ins1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
-        </a-entity>  
-        <a-entity class="historyPanel" id="panel2" visible="false">
-          <a-image rotation="0 0 0" position="0 0 0.1" scale="2.4 1.5 1.5" src="#ins2" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
-        </a-entity>   
-       
-        <a-image id="zoomIn" class="clickable" src="#zoomIn-icon" position="0.6 1 0.2" height="0.15" width="0.15"></a-image>
-        <a-image id="zoomOut" class="clickable" src="#zoomOut-icon" position="0.9 1 0.2" height="0.15" width="0.15"></a-image>
-       
-        <a-image id="infoButton" rotation="0 0 -90" class="clickable"  position="0.5 -1 0" scale="0.15 0.15 0.15" > </a-image>
-        <a-image id="historyButton" rotation="0 0 90" class="clickable"  position="-0.5 -1 0" scale="0.15 0.15 0.15" ></a-image>
+      <a-entity class="welcomePanel" id="panel0">
+          <a-image rotation="0 0 0" position="0 0 0.1" scale="2.0 1.2 1.2" src="#welcKXR" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+      </a-entity>
+
+      <a-entity class="infoPanel" id="panel1" visible="false">
+        <a-image rotation="0 0 0" position="0.8 0.8 0.1" scale="1 1 1" src="#desc2" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+        <a-image rotation="0 0 0" position="0.2 -0.8 0.1" scale="1 1 1" src="#title2" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
+
+      </a-entity>  
+         
+     
+      <a-image id="zoomIn" class="clickable" src="#zoomIn-icon" position="0.6 1 0.2" height="0.15" width="0.15"></a-image>
+      <a-image id="zoomOut" class="clickable" src="#zoomOut-icon" position="0.9 1 0.2" height="0.15" width="0.15"></a-image>
+     
+      <a-image id="exploreButton" rotation="0 0 -90" class="clickable" src="#explr-btn" position="0 -1 0" scale="0.5 0.5 0.5" > </a-image>
+
       </a-entity>
 
 
