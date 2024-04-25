@@ -69,6 +69,7 @@
         <a-asset-item id="welc" src="test1.glb"></a-asset-item>
         <img id="zoomIn-icon" src="zoom-in-icon-blue.png" />
         <img id="zoomOut-icon" src="zoom-out-icon-blue.png" />
+        <img id="welcKXR" src="KXR_Welcome.png" />
         <img id="ins1" src="Slide_1.jpg" />
         <img id="ins2" src="Slide_2.jpg" />
         <img id="ins3" src="Slide_3.jpg" />
@@ -82,7 +83,7 @@
       <a-entity mindar-image-target="targetIndex: 0" id="studio-marker">
        
         <a-entity class="welcomePanel" id="panel0">
-        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1.5 1.5 1.5" src="#welc" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+            <a-image rotation="0 0 0" position="0 0 0.1" scale="2.4 1.5 1.5" src="#welcKXR" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
         </a-entity>
         <a-entity class="infoPanel" id="panel1" visible="false">
           <a-image rotation="0 0 0" position="0 0 0.1" scale="2.4 1.5 1.5" src="#ins1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"> 
