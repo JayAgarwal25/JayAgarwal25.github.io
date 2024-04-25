@@ -26,12 +26,7 @@
                 showPanel(currentIndex);
                 document.querySelector("#exploreButton").setAttribute("visible", false);
               }
-
-              function prevPanel() {
-                currentIndex = (currentIndex - 1 + panels.length) % panels.length;
-                showPanel(currentIndex);
-              }
-
+              
               showPanel(currentIndex);
 
               const exploreButton = document.getElementById("exploreButton");
